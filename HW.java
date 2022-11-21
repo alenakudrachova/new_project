@@ -37,15 +37,16 @@ public class HW {
         }
 
         public static void just_while() {
+            int c = 10;
             int d = 0;
-            for (int c = 10; c <= 55; c++)
-                while (c % 2 == 0) {
+            while (c <= 55) {
+                if (c % 2 == 0) {
                     d = d + c;
-                    c++;
                 }
+                c++;
+            }
             System.out.println(d);
         }
-
 
         public static void main(String[] args) {
             if_plus_for();

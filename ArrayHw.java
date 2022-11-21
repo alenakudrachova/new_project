@@ -10,9 +10,9 @@ public class ArrayHw {
 
         for (int n = 0; n < arrays.length; n++) {
             arrays[n] = random.nextInt();
-            m = m + arrays[n];
+            m += arrays[n];
         }
-        s = m / 55;
+        s = m / arrays.length;
         System.out.println(s);
     }
     public static void max_num() {
@@ -30,7 +30,7 @@ public class ArrayHw {
         System.out.println(maxNum);
     }
 
-        public static void main (String[]args) {
+        public static void main (String[] args) {
             array_avr();
             max_num();
         }
