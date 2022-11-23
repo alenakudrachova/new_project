@@ -8,17 +8,11 @@ public class Main {
             first.salary();
 
 
-            Cars BMW = new Cars("BMW");
-            BMW.displayInto("BMW");
-
-            Cars speed = new Cars(100);
-            speed.displayInto(100);
-
-            Cars difference = new Cars(6.1f, 5.9f);
-            difference.displayInto(6.1f-5.9f);
-
-            Cars result = new Cars(6.1f, 5.9f);
-            result.result();
+            Cars BMW = new Cars("BMW", 100, 6.1f, 5.9f);
+            BMW.brand();
+            BMW.speed();
+            BMW.difference(6.1f-5.9f);
+            BMW.result();
         }
 
 }

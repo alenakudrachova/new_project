@@ -5,26 +5,22 @@ public class Cars {
     float deceleration_time;
     String brand;
 
-    public Cars(String brand) {
+    public Cars(String brand, int speed,float acceleration_time, float deceleration_time) {
         this.brand = brand;
-    }
-    public Cars(int speed) {
         this.speed = speed;
-    }
-    public Cars(float acceleration_time, float deceleration_time) {
         this.acceleration_time = acceleration_time;
         this.deceleration_time = deceleration_time;
     }
 
-    public void displayInto(String brand) {
+    public void brand() {
         System.out.println("Car's brand: \n" + brand);
     }
 
-    public void displayInto(int speed) {
+    public void speed() {
         System.out.println("Car's speed: \n" + speed);
     }
 
-    public void displayInto(float v) {
+    public void difference(float v) {
         System.out.println("Car's time difference: \n" + v);
     }
 
