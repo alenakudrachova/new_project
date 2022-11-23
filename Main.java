@@ -11,7 +11,7 @@ public class Main {
             Cars BMW = new Cars("BMW", 100, 6.1f, 5.9f);
             BMW.brand();
             BMW.speed();
-            BMW.difference(6.1f-5.9f);
+            BMW.difference();
             BMW.result();
         }
 

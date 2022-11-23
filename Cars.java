@@ -20,8 +20,8 @@ public class Cars {
         System.out.println("Car's speed: \n" + speed);
     }
 
-    public void difference(float v) {
-        System.out.println("Car's time difference: \n" + v);
+    public void difference() {
+        System.out.println("Car's time difference: \n" + (acceleration_time-deceleration_time));
     }
 
     public void result() {
