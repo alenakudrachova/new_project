@@ -1,0 +1,54 @@
+h1 {
+    color: green;
+    font-family:courier;
+    font-style: italic;
+    font-size: 40px;
+    text-align: center;
+    }
+
+p {
+    color:green;
+    font-family:monospace;
+    font-size: 20px;
+    text-align: left;
+}
+h2 {
+    font-family:courier;
+    font-size: 20px;
+    text-align: left;
+}
+
+h3 {
+    font-family:courier;
+    font-size: 20px;
+    text-align: left;
+   }
+
+select {
+    font-family:monospace;
+    font-size: 15px;
+}
+
+table {
+  font-family: monospace;
+  border-collapse: collapse;
+  width: 70%;
+}
+
+td, th {
+  border: 1px solid black;
+  border-radius: 10px;
+  border-style:dotted;
+  text-align: left;
+  padding: 8px;
+}
+th, td {
+  background-color: #96D4D4;
+}
+
+input {
+  color: width;
+  background-color: #4CAF50;
+  padding: 15px 32px;
+  text-align: center;
+}

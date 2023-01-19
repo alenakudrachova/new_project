@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D&D page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="myScript.js"></script>
+</head>
+<body>
+<h1>Welcome to the world of D&D!</h1>
+<p>My name is Arvel</p>
+<p>I'm human-barbarian 8 level</p>
+
+<h2>D&D races</h2>
+<select>
+    <option>Dwarf</option>
+    <option>Elf</option>
+    <option>Halfling</option>
+    <option>Human</option>
+    <option>Dragonborn</option>
+    <option>Gnome</option>
+    <option>Half-elf</option>
+    <option>Half-orc</option>
+    <option>Tiefling</option>
+</select>
+
+<h2>D&D classes</h2>
+<select>
+    <option>Barbarian</option>
+    <option>Bard</option>
+    <option>Cleric</option>
+    <option>Druid</option>
+    <option>Fighter</option>
+    <option>Paladin</option>
+    <option>Rogue</option>
+    <option>Ranger</option>
+    <option>Warlock</option>
+    <option>Wizard</option>
+    <option>Monk</option>
+    <option>Sorcerer</option>
+</select>
+
+<h3>Main characteristics of classes:</h3>
+<table>
+    <tr>
+        <th>Class</th>
+        <th>Hit die</th>
+        <th>Primary ability</th>
+        <th>Saving throw proficiencies</th>
+    </tr>
+    <tr>
+        <td>Barbarian</td>
+        <td>d12</td>
+        <td>strength</td>
+        <td>strength&constitution</td>
+    </tr>
+    <tr>
+        <td>Bard</td>
+        <td>d8</td>
+        <td>charisma</td>
+        <td>dexterity&charisma</td>
+    </tr>
+    <tr>
+        <td>Cleric</td>
+        <td>d8</td>
+        <td>wisdom</td>
+        <td>wisdom&charisma</td>
+    </tr>
+    <tr>
+        <td>Druid</td>
+        <td>d8</td>
+        <td>wisdom</td>
+        <td>wisdom&intelligence</td>
+    </tr>
+    <tr>
+        <td>Fighter</td>
+        <td>d10</td>
+        <td>strength or dexterity</td>
+        <td>strength&constitution</td>
+    </tr>
+    <tr>
+        <td>Monk</td>
+        <td>d8</td>
+        <td>dexterity&wisdom</td>
+        <td>strength&dexterity</td>
+    </tr>
+</table>
+
+<h3>Proficiency bonuses:</h3>
+<input type="checkbox" id="bonus1" name="bonus1" value="bonus+2">
+<label for="bonus1"> +2</label><br>
+<input type="checkbox" id="bonus2" name="bonus2" value="bonus+3">
+<label for="bonus2"> +3</label><br>
+<input type="checkbox" id="bonus3" name="bonus3" value="bonus+4">
+<label for="bonus3"> +4</label><br>
+<input type="checkbox" id="bonus4" name="bonus4" value="bonus+5">
+<label for="bonus4"> +5</label><br>
+<input type="checkbox" id="bonus5" name="bonus5" value="bonus+6">
+<label for="bonus5"> +6</label><br>
+
+<h3>More info here:</h3>
+<a href="https://www.dndbeyond.com/" target="_blank" >Playing D&D has never been easier</a>
+<br><br>
+<input id="button1" type="button" onclick="showMessage()" value="Click!">
+<br><br>
+<img src="roll.jpg" alt="Roll the dice" width=300 height=300 >
+</body>
+</html>
