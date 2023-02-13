@@ -1,6 +1,7 @@
 package selenideTest;
 
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.selector.ByText;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,7 +19,7 @@ public class LoginTest extends BaseTest{
         $(By.id("login-button")).click();
         $x("//button[contains(@class, 'btn_primary') and contains(@name, 'add-to-cart-sauce-labs-onesie')]").click();
         $x("//a[contains (@class, 'shopping_cart_link')]").click();
-        SelenideElement nameOfProduct = $x("//div[contains (@class, 'inventory_item_name')]");
-        Assert.assertTrue(nameOfProduct.isDisplayed(), String.format("Element not found"));
+        SelenideElement nameOfProduct = $(new ByText("Sauce Labs Onesie"));
+        Assert.assertTrue(nameOfProduct.exists(), String.format("Element not found", nameOfProduct.getText()));
     }
 }
