@@ -1,9 +1,9 @@
 package steps;
 
-import pages.SortingCheck;
+import pages.SortingPage;
 
 public class SortingCheckSteps {
-    private SortingCheck sortingCheck = new SortingCheck();
+    private SortingPage sortingCheck = new SortingPage();
 
     public void sorting () {
         sortingCheck.setProductSort();

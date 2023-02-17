@@ -6,7 +6,7 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 import static org.openqa.selenium.By.id;
 
-public class LogoutPage {
+public class SideBarMenu {
     private SelenideElement burgerMenu = $(id("react-burger-menu-btn"));
     private SelenideElement clickLogout = $(id("logout_sidebar_link"));
 
@@ -20,5 +20,9 @@ public class LogoutPage {
         clickLogout
                 .shouldBe(Condition.enabled)
                 .click();
+    }
+
+    public boolean showBurgerMenu() {
+        return burgerMenu.isDisplayed();
     }
 }

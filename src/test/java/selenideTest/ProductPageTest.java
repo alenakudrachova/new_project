@@ -2,16 +2,18 @@ package selenideTest;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.ProductsPage;
 import steps.LoginPageSteps;
 import steps.ProductPageSteps;
 
-public class TestProductPage{
+public class ProductPageTest{
     @Test
-    public void TestProduct () {
+    public void testProduct() {
         LoginPageSteps loginPageSteps = new LoginPageSteps();
         loginPageSteps.login("standard_user", "secret_sauce");
         ProductPageSteps productPageSteps = new ProductPageSteps();
-        productPageSteps.byClick();
-        Assert.assertTrue(productPageSteps.setNameOfProduct(), String.format("Element not found"));
+        productPageSteps.addToShoppingCart();
+        ProductsPage productsPage = new ProductsPage();
+        Assert.assertTrue(productsPage.setNameOfProduct(), String.format("Element not found"));
     }
 }
