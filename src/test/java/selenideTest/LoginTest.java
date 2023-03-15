@@ -23,15 +23,4 @@ public class LoginTest extends BaseTest{
         ProductsPage productsPage = new ProductsPage();
         Assert.assertTrue(productsPage.setProductHeader(), "Header not found");
     }
-
-//    public void loginFluentPageTest() {
-//        LoginFluentPage loginFluentPage = new LoginFluentPage();
-//        boolean isHeaderDisplayed = loginFluentPage
-//                .openPage()
-//                .inputEmail("standard_user")
-//                .inputPassword("secret_sauce")
-//                .clickLoginButton()
-//                .setProductHeader();
-//        Assert.assertTrue(isHeaderDisplayed, "Header not found");
-//    }
 }
