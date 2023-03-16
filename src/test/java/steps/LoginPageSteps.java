@@ -1,11 +1,23 @@
 package steps;
+
+import models.LoginPageModel;
 import pages.LoginPage;
+
 public class LoginPageSteps {
+
     private LoginPage loginPage = new LoginPage();
-    public void login (String email, String password) {
+
+    public void setLoginPageHardcode() {
         loginPage.openPage();
-        loginPage.inputEmail(email);
-        loginPage.inputPassword(password);
+        loginPage.inputEmail("standard_user");
+        loginPage.inputPassword("secret_sauce");
+        loginPage.clickLoginButton();
+    }
+
+    public void login (LoginPageModel model) {
+        loginPage.openPage();
+        loginPage.inputEmail(model.getUsername());
+        loginPage.inputPassword(model.getPassword());
         loginPage.clickLoginButton();
     }
 }
