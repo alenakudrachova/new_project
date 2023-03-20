@@ -1,14 +1,15 @@
 package pages;
+
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+
+import static com.codeborne.selenide.Selenide.*;
 import static org.openqa.selenium.By.id;
-import static selenideTest.WebVariables.loginUrl;
 public class LoginPage extends  BasePage{
     private SelenideElement emailInputField = $(id("user-name"));
     private SelenideElement passwordInputField = $(id("password"));
     private SelenideElement loginButton = $(id("login-button"));
+    private SelenideElement errorLogin  = $x("//div[contains (@class, 'error-message-container error')]");
 
     public  void openPage() {
         open(loginUrl);
@@ -30,5 +31,9 @@ public class LoginPage extends  BasePage{
         loginButton
                 .shouldBe(Condition.enabled)
                 .click();
+    }
+
+    public boolean setErrorLogin() {
+        return errorLogin.isDisplayed();
     }
 }

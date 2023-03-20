@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Swaglabs Test">
+    <listeners>
+        <listener class-name="utilities.AnnotationTransformer"></listener>
+        <listener class-name="utilities.TestListener"></listener>
+    </listeners>
+    <test name="Login test">
+        <classes>
+            <class name="selenideTest.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Checkout test">
+        <classes>
+            <class name="selenideTest.CheckoutTest"/>
+        </classes>
+    </test>
+    <test name="Product page test">
+        <classes>
+            <class name="selenideTest.ProductPageTest"/>
+        </classes>
+    </test>
+    <test name="Sorting check test">
+        <classes>
+            <class name="selenideTest.SortingCheckTest"/>
+        </classes>
+    </test>
+    <test name="Delete test">
+        <classes>
+            <class name="selenideTest.DeleteTest"/>
+        </classes>
+    </test>
+    <test name="Logout test">
+        <classes>
+            <class name="selenideTest.LogoutTest"/>
+        </classes>
+    </test>
+</suite>
