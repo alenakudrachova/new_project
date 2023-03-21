@@ -9,8 +9,8 @@ public class LoginPageSteps {
 
     public void setLoginPageHardcode() {
         loginPage.openPage();
-        loginPage.inputEmail("standard_user");
-        loginPage.inputPassword("secret_sauce");
+        loginPage.inputEmail(System.getProperty("username"));
+        loginPage.inputPassword(System.getProperty("password"));
         loginPage.clickLoginButton();
     }
 

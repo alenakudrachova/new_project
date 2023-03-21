@@ -1,12 +1,17 @@
 package selenideTest;
 
+import lombok.Builder;
+import lombok.Data;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pages.LoginPage;
 import pages.ProductsPage;
 import prepare_data.PrepareLoginData;
 import steps.LoginPageSteps;
-
-public class LoginTest extends BaseTest{
+@Data
+@Builder
+public class LoginTest extends BaseTest {
 
     @Test
     public void loginTest() {
@@ -17,10 +22,28 @@ public class LoginTest extends BaseTest{
     }
 
     @Test
-    public void loginTestFake() {
+    public void loginFakeTest() {
         LoginPageSteps loginPageSteps = new LoginPageSteps();
         loginPageSteps.login(PrepareLoginData.getData());
-        ProductsPage productsPage = new ProductsPage();
-        Assert.assertTrue(productsPage.setProductHeader(), "Header not found");
+        LoginPage loginPage = new LoginPage();
+        Assert.assertTrue(loginPage.setErrorLogin(), "Error not found");
+    }
+
+    @Test(dataProvider = "invalidLoginData")
+    public void loginDataProviderTest(String email, String password) {
+        LoginPage loginPage = new LoginPage();
+        loginPage.openPage();
+        loginPage.inputEmail(email);
+        loginPage.inputPassword(password);
+        loginPage.clickLoginButton();;
+        Assert.assertTrue(loginPage.setErrorLogin(), "Error not found");
+    }
+    @DataProvider(name= "invalidLoginData")
+    public Object [][] input(){
+        return new Object[][]{
+                {"lkjhgf",""},
+                {"lkj","lkjdd"},
+                {"","jhgfd"}
+        };
     }
 }
